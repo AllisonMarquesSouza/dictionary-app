@@ -1,10 +1,26 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import "./index.css";
+import SavedWords from "./pages/SavedWords.jsx";
+import App from "./App.jsx";
+import { SavedWordsProvider } from "./components/SavedWordsContext.jsx";
 
-createRoot(document.getElementById('root')).render(
+const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: App,
+  },
+  {
+    path: "/saved-words",
+    Component: SavedWords,
+  },
+]);
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <SavedWordsProvider>
+      <RouterProvider router={router} />
+    </SavedWordsProvider>
   </StrictMode>,
-)
+);
