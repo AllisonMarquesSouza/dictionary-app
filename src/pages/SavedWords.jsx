@@ -20,13 +20,13 @@ function SavedWords() {
   }
 
   return (
-    <div className="flex flex-col items-center w-full gap-4 relative">
+    <div className="flex flex-col items-center min-h-dvh w-full gap-4 relative dark:bg-slate-900 ">
       <Link
         to="/"
         aria-label="Back beginning"
         className="absolute left-2 top-2 rounded p-2 transition hover:opacity-70 focus:outline-none focus:ring-2"
       >
-        <FaHome className="text-3xl" arial-hidden="True" />
+        <FaHome className="text-3xl dark:text-slate-100" arial-hidden="True" />
       </Link>
 
       <SavedWordsTitle />
@@ -38,7 +38,7 @@ function SavedWords() {
 
       {savedWords.map((word) => (
         <div
-          className="flex flex-col gap-4 w-full max-w-3xl p-6 rounded-lg border border-slate-200 bg-white  shadow-sm"
+          className="flex flex-col gap-4 w-full max-w-3xl p-6 rounded-lg border border-slate-200 bg-white dark:bg-slate-900  shadow-sm"
           key={word.word}
         >
           <div className="flex justify-between pb-5 border-b border-slate-200 ">

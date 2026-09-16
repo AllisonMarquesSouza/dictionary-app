@@ -4,7 +4,7 @@ function WordDetailsToggleButton({ setExpandedWord, expandedWord, word }) {
   return (
     <button
       type="button"
-      className="flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-slate-900 cursor-pointer"
+      className="flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-300 transition hover:text-slate-900 dark:hover:text-slate-100 cursor-pointer"
       onClick={() =>
         setExpandedWord(expandedWord === word.word ? null : word.word)
       }

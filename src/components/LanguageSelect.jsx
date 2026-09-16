@@ -18,7 +18,7 @@ function LanguageSelect({ setSelectedLanguage }) {
   return (
     <select
       onChange={(event) => setSelectedLanguage(event.target.value)} //value inside the option being selected.
-      className="w-20 px-1 py-2 outline-1 rounded-md md:w-40 md:px-2"
+      className="dark:hover:bg-slate-100 dark:hover:text-slate-900 w-20 px-1 py-2 outline-1 rounded-md md:w-40 md:px-2"
     >
       {languages.map((language) => (
         <option key={language.code} value={language.code}>

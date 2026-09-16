@@ -26,7 +26,7 @@ function WordDetails({ wordDefinition }) {
   //?? -> if is null or undefined, use [] instead like entries value.
 
   return (
-    <div className=" max-w-3xl p-6 rounded-md border border-slate-200 bg-white shadow-md">
+    <div className="max-w-3xl p-6 rounded-md border border-slate-200 bg-white shadow-md dark:bg-slate-900">
       <div className="flex justify-between pb-5 border-b border-slate-200 ">
         <WordTitle wordDefinition={wordDefinition} />
         <SaveWordButton
