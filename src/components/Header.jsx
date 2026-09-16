@@ -25,7 +25,6 @@ function Header() {
         className="flex items-center gap-1 p-3 rounded-md  absolute right-2 top-2 hover:bg-slate-900 hover:text-slate-100 "
         to="/saved-words"
       >
-        {/* Learn about react context and how to share the data between pages, when is not using props */}
         <LuBookmarkPlus className="text-2xl hover:cursor-pointer transition" />
         <span>Saved words</span>
       </Link>
