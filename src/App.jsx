@@ -21,8 +21,15 @@ function App() {
   }, [darkMode]);
 
   async function getWordDefinition(languageCode, word) {
-    if (!word) return;
+    if (!word) {
+      console.log("no such word");
+      return;
+    }
     const wordDefinition = await getWordDetails(languageCode, word);
+    if (wordDefinition.entries.length === 0) {
+      setWordDefinition("");
+      return;
+    }
     setWordDefinition(wordDefinition);
   }
 
@@ -60,6 +67,9 @@ function App() {
         </div>
 
         {wordDefinition && <WordDetails wordDefinition={wordDefinition} />}
+        {wordDefinition === "" && (
+          <h1 className="text-2xl">Word not found, try again</h1>
+        )}
       </div>
     </div>
   );
