@@ -5,7 +5,7 @@ function Menu() {
   return (
     <div id="social-menu" className="flex flex-col gap-1">
       <a
-        href="https://github.com/AllisonMarquesSouza"
+        href="https://github.com/AllisonMarquesSouza/dictionary-app"
         target="_blank"
         className="flex items-center gap-1 p-3 rounded-md text-slate-50 bg-slate-900 hover:cursor-pointer transition hover:bg-slate-600"
       >
